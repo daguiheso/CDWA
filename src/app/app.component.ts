@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  votacion = '';
 
   votos = [
     {title: 'opcion 1'},
@@ -15,4 +16,9 @@ export class AppComponent {
     {title: 'opcion 4'},
     {title: 'opcion 5'}
   ]
+
+  addVoto(response:string) {
+    this.votacion = 'usted eligio la ' + response;
+  }
+
 }
