@@ -5,12 +5,17 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+//pipes
+import { ConversorPipe } from './pipes/conversor.pipe';
+
+// input
 import { InputComponent } from './input/input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent
+    InputComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
