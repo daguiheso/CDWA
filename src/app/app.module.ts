@@ -11,11 +11,17 @@ import { ConversorPipe } from './pipes/conversor.pipe';
 // input
 import { InputComponent } from './input/input.component';
 
+// directives
+import { GigantDirective } from './directives/gigant.directive';
+import { HightlightDirective } from './directives/hightlight.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
-    ConversorPipe
+    ConversorPipe,
+    GigantDirective,
+    HightlightDirective
   ],
   imports: [
     BrowserModule,
