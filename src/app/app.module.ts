@@ -15,6 +15,10 @@ import { InputComponent } from './input/input.component';
 import { GigantDirective } from './directives/gigant.directive';
 import { HightlightDirective } from './directives/hightlight.directive';
 
+// service
+import { TicketService } from './services/ticket.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,7 @@ import { HightlightDirective } from './directives/hightlight.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [TicketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

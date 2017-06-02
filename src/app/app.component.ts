@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { TicketService } from './services/ticket.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,6 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   votacion = '';
+  tickets: any;
 
   votos = [
     {title: 'opcion 1'},
@@ -16,6 +19,11 @@ export class AppComponent {
     {title: 'opcion 4'},
     {title: 'opcion 5'}
   ]
+
+  // todos los servicios o injecciones que utilizemos hay que declararlas en el componente
+  constructor(private ticketService:TicketService) {
+    this.tickets = ticketService.getTicket();
+  }
 
   addVoto(response:string) {
     this.votacion = 'usted eligio la ' + response;

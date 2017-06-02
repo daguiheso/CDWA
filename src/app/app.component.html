@@ -12,3 +12,10 @@
 <div>1 dolar es: <input [(ngModel)]="factor"></div>
 
 <p>oh es: {{ cantidad | conversorPipe:factor }}</p>
+
+<ul>
+  <li *ngFor="let i of tickets" gigant>
+    <b>Ticket N: {{i.id}}</b> - {{i.titulo}}
+    <span hightlight>[ {{i.estado}} ]</span>
+  </li>
+</ul>
