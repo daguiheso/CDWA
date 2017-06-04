@@ -45,3 +45,28 @@
   </div>
   <button type="submit">Submit</button>
 </form>
+
+<br>
+<br>
+
+<h2>Form Reactivo</h2>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmitReactivo(myForm.value)">
+  <div>
+    <label for="empresaInput">Nombre Empresa</label>
+    <input type="text"
+           id="empresaInput"
+           placeholder="Nombre empresa"
+           name="empresa"
+           [formControl]="myForm.controls['name']">
+  </div>
+  <div>
+    <label for="telefonoInput">Telefono</label>
+    <input type="text"
+           id="telefonoInput"
+           placeholder="Telefono"
+           name="telefono"
+           [formControl]="myForm.controls['telefono']">
+  </div>
+  <button type="submit">Submit</button>
+</form>
